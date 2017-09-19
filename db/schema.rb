@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170919012055) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "score_boards", force: :cascade do |t|
+  create_table "scores", force: :cascade do |t|
     t.integer "user_id"
     t.integer "highScore"
     t.datetime "created_at", null: false

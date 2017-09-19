@@ -1,6 +1,6 @@
-class CreateScoreBoards < ActiveRecord::Migration[5.1]
+class CreateScores < ActiveRecord::Migration[5.1]
   def change
-    create_table :score_boards do |t|
+    create_table :scores do |t|
       t.integer :user_id
       t.integer :highScore
 
