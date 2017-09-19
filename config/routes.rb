@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root to: 'games#index'
+  get 'games/index'
+
   devise_for :users
 
   get 'scoreboard', to: 'scores#index'
