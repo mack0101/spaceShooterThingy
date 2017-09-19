@@ -1,3 +1,69 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: black;
+}
+
+nav > a {
+  color: white;
+}
+
+canvas {
+  position: absolute;
+  top: 50px;
+  left: 50%px;
+  background: transparent;
+  border: 1px solid white;
+}
+
+.container {
+  margin: 0 auto;
+  width: 800px;
+}
+#background {
+  z-index: -2;
+}
+#main {
+  z-index: -1;
+}
+#ship {
+  z-index: 0;
+}
+.score {
+  position: absolute;
+  top: 70px;
+  left: calc(50% + 280px);
+  color: #FF7F00;
+  font-family: Helvetica, sans-serif;
+  cursor: default;
+}
+.game-over {
+  position: absolute;
+  top: 230px;
+  left: calc(50% - 75px);
+  color: #FF7F00;
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
+  cursor: default;
+  display: none;
+}
+.game-over span {
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  left: 60px;
+}
+.game-over span:hover {
+  color: #FFD700;
+}
+.loading {
+  position: absolute;
+  top: 230px;
+  left: calc(50% - 75px);
+  color: #FF7F00;
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
+  cursor: default;
+}

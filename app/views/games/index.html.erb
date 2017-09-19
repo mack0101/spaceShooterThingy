@@ -1,2 +1,16 @@
-<h1>Games#index</h1>
-<p>Find me in app/views/games/index.html.erb</p>
+<div class="container">
+  <!-- The canvas for the panning background -->
+  <canvas id="background" width="800" height="600">
+    Your browser does not support canvas. Please try again with a different browser.
+  </canvas>
+  <!-- The canvas for all enemy ships and bullets -->
+  <canvas id="main" width="800" height="600">
+  </canvas>
+  <!-- The canvas the ship uses (can only move up
+  one forth the screen. -->
+  <canvas id="ship" width="800" height="600">
+  </canvas>
+  <div class="score">SCORE: <span id="score"></span></div>
+  <div class="game-over" id="game-over">GAME OVER<p><span onclick="game.restart()">Restart</span></p></div>
+  <div class="loading" id="loading">LOADING...<p>Please wait</p></div>
+</div>
