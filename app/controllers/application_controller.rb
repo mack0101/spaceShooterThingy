@@ -5,6 +5,9 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
+    logger.info("DEVISE CONTROLLER\n")
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname])
+    logger.info(devise_parameter_sanitizer)
   end
 end
