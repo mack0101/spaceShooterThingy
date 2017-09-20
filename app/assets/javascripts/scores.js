@@ -4,12 +4,20 @@ $(document).ready( function() {
   $.getJSON( 'scoreboard.json', function(res) {
     console.log(res);
     for (let s in res) {
-      console.log(s);
-      $('tbody').append(`<tr><td>${res[s].nickname}</td><td>${res[s].score}</td></tr>`);
+      $('tbody').append(`<tr><td>${parseInt(s) + parseInt(1)}</td><td>${res[s].nickname}</td><td>${res[s].score}</td></tr>`);
     }
+    colorCells();
   });
 
-  // for (let s in scores) {
-  //   console.log(s);
+  // color cells
+  function colorCells() {
+    let colors = ['#f80c12', '#ff4422', '#feae2d', '#ccbb33', '#aacc22', '#69d025',
+    '#22ccaa', '#12bdb9', '#4444dd', '#442299'];
+    
+    let rows = $('table tbody tr');
 
+    for (let i = 0; i < rows.length; i++) {
+      $(rows[i]).css('background-color', colors[i]);
+    }
+  }
 })
