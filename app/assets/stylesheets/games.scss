@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+  background-image: url(/assets/earth.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: black;
   color: white;
 }
@@ -85,4 +88,18 @@ canvas {
   font-family: Helvetica, sans-serif;
   font-size: 30px;
   cursor: default;
+}
+
+.form {
+  margin: 100px auto;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  border: 1px solid rgba(212, 20, 12, 0);
+  box-shadow: 1px 1px 3px black;
+  background-color: rgba(135, 135, 135, 0.2);
+}
+
+a {
+  border: 1px solid white;
 }
