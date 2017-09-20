@@ -829,8 +829,22 @@ function Game() {
 		this.gameOverAudio.currentTime = 0;
 		this.gameOverAudio.play();
 		document.getElementById('game-over').style.display = "block";
+		this.updateScore();
 	};
+
+	this.updateScore = function() {
+		// post score to db
+		let s = parseInt($('#score').text());
+		let u = $('.container').data('username');
+		let score = {nickname: u, score: s};
+		$.post( 'scores', score).done(function() {
+			console.log('Score Saved');
+		});
+
+	}
 }
+
+
 
 /**
  * Ensure the game sound has loaded before starting the game
