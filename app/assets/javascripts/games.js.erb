@@ -62,13 +62,13 @@ let imageRepository = new function() {
 
 /**
  * Creates the Drawable object which will be the base class for
- * all drawable objects in the game. Sets up defualt letiables
+ * all drawable objects in the game. Sets up defualt variables
  * that all child objects will inherit, as well as the defualt
  * functions.
  */
 function Drawable() {
 	this.init = function(x, y, width, height) {
-		// Defualt letiables
+		// Defualt variables
 		this.x = x;
 		this.y = y;
 		this.width = width;
@@ -507,7 +507,7 @@ function Ship() {
 	this.type = "ship";
 
 	this.init = function(x, y, width, height) {
-		// Defualt letiables
+		// Defualt variables
 		this.x = x;
 		this.y = y;
 		this.width = width;
@@ -1004,3 +1004,18 @@ window.requestAnimFrame = (function(){
 				window.setTimeout(callback, 1000 / 60);
 			};
 })();
+
+$(document).ready( function() {
+  $('#startGame').on('click', function() {
+    c = $('.container');
+    $('.startGame').remove();
+    c.html('<canvas id="background" width="800" height="600">Your browser does not support canvas. Please try again with a different browser.</canvas><!-- The canvas for all enemy ships and bullets --><canvas id="main" width="800" height="600"></canvas><!-- The canvas the ship uses (can only move up one forth the screen. --><canvas id="ship" width="800" height="600"></canvas><div class="score">SCORE: <span id="score"></span></div><div class="game-over" id="game-over">GAME OVER<p><span onclick="game.restart()">Restart</span></p></div><div class="loading" id="loading">LOADING...<p>Please wait</p></div>');
+    game.init();
+  });
+
+
+
+
+
+
+});

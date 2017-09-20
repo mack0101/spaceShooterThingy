@@ -10,6 +10,26 @@ body {
   color: white;
 }
 
+.startGame {
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 50px;
+  left: 50%px;
+  background: transparent;
+  border: 1px solid white;
+  background-color: rgba(171, 171, 171, 0.3);
+}
+
+.startGame > a {
+  position: absolute;
+  display: inline-block;
+  top: 290px;
+  left: 300px;
+  font-size: 30px;
+  
+}
+
 nav > a {
   color: white;
   background-color: rgba(0, 0, 0, 0);
