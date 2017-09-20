@@ -2,25 +2,6 @@
 // was modified from
 // https://github.com/straker/galaxian-canvas-game
 
-/*************** PART FIVE - Finishing touches
- ***************/
-
-/* NOTES TO REMEMBER
- * Could add
- * - hitboxes to all objects to make collision better
- * - levels
- * - bosses
- * - explosions / particles
- * - parallax background
- * - vectors for movement
- * - lirbraries! http://www.createjs.com/#!/CreateJS
- */
-
-/* RESOURCES
- * http://www.w3schools.com/html5/html5_ref_av_dom.asp
- * http://www.superflashbros.net/as3sfxr/
- */
-
 /**
  * Initialize the Game and start it.
  */
@@ -829,8 +810,22 @@ function Game() {
 		this.gameOverAudio.currentTime = 0;
 		this.gameOverAudio.play();
 		document.getElementById('game-over').style.display = "block";
+		this.updateScore();
 	};
+
+	this.updateScore = function() {
+		// post score to db
+		let s = parseInt($('#score').text());
+		let u = $('.container').data('username');
+		let score = {nickname: u, score: s};
+		$.post( 'scores', score).done(function() {
+			console.log('Score Saved');
+		});
+
+	}
 }
+
+
 
 /**
  * Ensure the game sound has loaded before starting the game
