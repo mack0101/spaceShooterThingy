@@ -18,16 +18,23 @@ body {
   left: 50%px;
   background: transparent;
   border: 1px solid white;
-  background-color: rgba(171, 171, 171, 0.3);
+  background-color: rgba(171, 171, 171, 0.14);
 }
 
 .startGame > a {
   position: absolute;
   display: inline-block;
-  top: 290px;
-  left: 300px;
+  top: 280px;
+  left: 290px;
   font-size: 30px;
-  
+  color: white;
+  background-color: black;
+  padding: 10px;
+}
+
+.startGame > a:hover {
+  background-color: black;
+  color: red;
 }
 
 nav > a {
