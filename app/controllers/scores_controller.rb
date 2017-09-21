@@ -1,6 +1,7 @@
 class ScoresController < ApplicationController
   def index
     score = Score.all.order(highScore: :desc).take(10)
+    currentRound = Score.last.id
     scores = []
     score.map do |s|
       scores.push(nickname: User.find(s.user_id).nickname, score: s.highScore)
@@ -8,7 +9,7 @@ class ScoresController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: scores}
+      format.json { render json: [scores, currentRound]}
     end
   end
 

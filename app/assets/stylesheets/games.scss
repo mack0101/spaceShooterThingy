@@ -111,6 +111,14 @@ canvas {
   margin: 0 auto;
   width: 800px;
 }
+
+#gameCounter {
+  position: absolute;
+  left: calc(50% - 95px);
+  top: 680px;
+
+}
+
 #background {
   z-index: -2;
 }

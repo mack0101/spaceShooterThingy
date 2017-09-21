@@ -1,10 +1,9 @@
 $(document).ready( function() {
   // get scores
-  let scores;
   $.getJSON( 'scoreboard.json', function(res) {
     console.log(res);
-    for (let s in res) {
-      $('tbody').append(`<tr><td>${parseInt(s) + parseInt(1)}</td><td>${res[s].nickname}</td><td>${res[s].score}</td></tr>`);
+    for (let s in res[0]) {
+      $('tbody').append(`<tr><td>${parseInt(s) + parseInt(1)}</td><td>${res[0][s].nickname}</td><td>${res[0][s].score}</td></tr>`);
     }
     colorCells();
   });
@@ -20,4 +19,12 @@ $(document).ready( function() {
       $(rows[i]).css('background-color', colors[i]);
     }
   }
+
+  // update game count
+  function getGameCount() {
+    $.getJSON( 'scoreboard.json', function(res) {
+      $('#gameCounter').html(`Total Games Played: ${res[1]}`);
+    })
+  }
+  setInterval( getGameCount, 2000);
 })
