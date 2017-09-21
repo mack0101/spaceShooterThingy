@@ -1,6 +1,4 @@
-// Place all the styles related to the games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 
 body {
   background-image: url(/assets/earth.jpg);
@@ -8,6 +6,7 @@ body {
   background-repeat: no-repeat;
   background-color: black;
   color: white;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .startGame {
@@ -126,7 +125,6 @@ canvas {
   top: 70px;
   left: calc(50% + 280px);
   color: #FF7F00;
-  font-family: Helvetica, sans-serif;
   cursor: default;
 }
 .game-over {
@@ -134,7 +132,6 @@ canvas {
   top: 230px;
   left: calc(50% - 75px);
   color: #FF7F00;
-  font-family: Helvetica, sans-serif;
   font-size: 30px;
   cursor: default;
   display: none;
@@ -153,7 +150,6 @@ canvas {
   top: 230px;
   left: calc(50% - 75px);
   color: #FF7F00;
-  font-family: Helvetica, sans-serif;
   font-size: 30px;
   cursor: default;
 }
@@ -174,7 +170,6 @@ a:hover {
 }
 
 .actions > input {
-  font-family: "Times New Roman";
   font-size: 1em;
   justify-content: center;
   width: 100%;
