@@ -116,7 +116,10 @@ canvas {
   position: absolute;
   left: calc(50% - 95px);
   top: 680px;
-
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  padding: 10px;
 }
 
 #background {
