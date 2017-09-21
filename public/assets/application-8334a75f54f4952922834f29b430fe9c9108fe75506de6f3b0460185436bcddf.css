@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+/* line 3, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+body {
+  background-image: url(/assets/earth.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* line 12, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.startGame {
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 50px;
+  left: 50% px;
+  background: transparent;
+  border: 1px solid white;
+  background-color: rgba(171, 171, 171, 0.14);
+}
+
+/* line 23, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.startGame > a {
+  position: absolute;
+  display: inline-block;
+  top: 280px;
+  left: 290px;
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  padding: 10px;
+}
+
+/* line 34, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.startGame > a:hover {
+  background-color: black;
+  color: red;
+}
+
+/* line 39, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+nav > a {
+  display: inline;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* line 45, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+a {
+  display: block;
+  text-decoration: none;
+  background: rgba(135, 135, 135, 0.2);
+  border-radius: 2px;
+  padding: 5px 10px;
+  color: white;
+}
+
+/* line 54, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+p {
+  color: white;
+}
+
+/* line 58, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+label {
+  color: white;
+}
+
+/* line 62, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 66, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+table {
+  width: 800px;
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+
+/* line 73, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+table > tbody > tr {
+  text-align: center;
+}
+
+/* line 77, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+table > tbody > tr > td {
+  padding: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: 800;
+}
+
+/* line 85, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+table > thead > tr > td {
+  font-weight: 800;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+/* line 94, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+table thead tr:last-child td:first-child {
+  border-top-left-radius: 10px;
+}
+
+/* line 98, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+table thead tr:last-child td:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* line 102, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+canvas {
+  position: absolute;
+  top: 50px;
+  left: 50% px;
+  background: transparent;
+  border: 1px solid white;
+}
+
+/* line 110, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.container {
+  margin: 0 auto;
+  width: 800px;
+}
+
+/* line 115, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+#gameCounter {
+  position: absolute;
+  left: calc(50% - 95px);
+  top: 680px;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+/* line 125, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+#background {
+  z-index: -2;
+}
+
+/* line 128, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+#main {
+  z-index: -1;
+}
+
+/* line 131, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+#ship {
+  z-index: 0;
+}
+
+/* line 134, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.score {
+  position: absolute;
+  top: 70px;
+  left: calc(50% + 280px);
+  color: #FF7F00;
+  cursor: default;
+}
+
+/* line 141, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.game-over {
+  position: absolute;
+  top: 230px;
+  left: calc(50% - 75px);
+  color: #FF7F00;
+  font-size: 30px;
+  cursor: default;
+  display: none;
+}
+
+/* line 150, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.game-over span {
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  left: 60px;
+}
+
+/* line 156, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.game-over span:hover {
+  color: #FFD700;
+}
+
+/* line 159, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.loading {
+  position: absolute;
+  top: 230px;
+  left: calc(50% - 75px);
+  color: #FF7F00;
+  font-size: 30px;
+  cursor: default;
+}
+
+/* line 168, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.form {
+  margin: 100px auto;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  border: 1px solid rgba(212, 20, 12, 0);
+  box-shadow: 1px 1px 3px black;
+  background-color: rgba(135, 135, 135, 0.2);
+}
+
+/* line 178, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+a:hover {
+  background: rgba(130, 139, 137, 0.8);
+  box-shadow: 5px 5px 20px black;
+}
+
+/* line 183, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.actions > input {
+  font-size: 1em;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  background: rgba(135, 135, 135, 0.2);
+  border-radius: 2px;
+  padding: 5px 10px;
+  color: white;
+}
+
+/* line 194, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.actions > input:hover {
+  background: rgba(130, 139, 137, 0.8);
+  cursor: pointer;
+  box-shadow: 5px 5px 20px black;
+}
+
+/* line 200, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+.form {
+  padding: 10px;
+}
+
+/* line 204, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+input {
+  width: 60%;
+  border-radius: 2px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+/* line 211, /mnt/c/development/general_assembly/projects/project3/spaceShooterThingy/app/assets/stylesheets/games.scss */
+#user_remember_me {
+  width: 5%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
