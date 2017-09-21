@@ -194,3 +194,15 @@ a:hover {
 .form {
   padding: 10px;
 }
+
+input {
+  max-width: 100%;
+  width: 60%;
+  border-radius: 2px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+#user_remember_me {
+  width: 5%;
+}
