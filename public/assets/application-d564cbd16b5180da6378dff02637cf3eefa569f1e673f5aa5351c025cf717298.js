@@ -14453,7 +14453,7 @@ function Enemy() {
 		this.x = x;
 		this.y = y;
 		this.speed = speed;
-		this.speedX = 0;
+		this.speedX = 2;
 		this.speedY = speed;
 		this.alive = true;
 		this.leftEdge = this.x - 90;
@@ -14475,7 +14475,8 @@ function Enemy() {
 			this.speedX = -this.speed;
 		}
 		else if (this.y >= this.bottomEdge) {
-			this.speed = 1.5;
+			// enemy movement speed
+			this.speed = 3;
 			this.speedY = 0;
 			this.y -= 5;
 			this.speedX = -this.speed;
@@ -14503,7 +14504,8 @@ function Enemy() {
 	 * Fires a bullet
 	 */
 	this.fire = function() {
-		game.enemyBulletPool.get(this.x+this.width/2, this.y+this.height, -2.5);
+		// set enemy bullet traversal speed
+		game.enemyBulletPool.get(this.x+this.width/2, this.y+this.height, -4);
 	};
 
 	/*
@@ -14671,6 +14673,7 @@ function Game() {
 		this.updateScore();
 	};
 
+	// post score to Rails server
 	this.updateScore = function() {
 		// post score to db
 		let s = parseInt($('#score').text());
@@ -14870,12 +14873,6 @@ $(document).ready( function() {
     c.html('<canvas id="background" width="800" height="600">Your browser does not support canvas. Please try again with a different browser.</canvas><!-- The canvas for all enemy ships and bullets --><canvas id="main" width="800" height="600"></canvas><!-- The canvas the ship uses (can only move up one forth the screen. --><canvas id="ship" width="800" height="600"></canvas><div class="score">SCORE: <span id="score"></span></div><div class="game-over" id="game-over">GAME OVER<p><span onclick="game.restart()">Restart</span></p></div><div class="loading" id="loading">LOADING...<p>Please wait</p></div>');
     game.init();
   });
-
-
-
-
-
-
 });
 $(document).ready( function() {
   // get scores
