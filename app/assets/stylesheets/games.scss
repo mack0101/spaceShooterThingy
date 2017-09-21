@@ -38,11 +38,13 @@ body {
 }
 
 nav > a {
+  display: inline;
   color: white;
   background-color: rgba(0, 0, 0, 0);
 }
 
 a {
+  display: block;
   text-decoration: none;
   background: rgba(135, 135, 135, 0.2);
   border-radius: 2px;
@@ -171,6 +173,11 @@ a:hover {
 }
 
 .actions > input {
+  font-family: "Times New Roman";
+  font-size: 1em;
+  justify-content: center;
+  width: 100%;
+  border: none;
   background: rgba(135, 135, 135, 0.2);
   border-radius: 2px;
   padding: 5px 10px;
@@ -182,10 +189,6 @@ a:hover {
   cursor: pointer;
 }
 
-input {
-  margin: 5px;
-}
-
-.actions > a {
-  line-height: 2em;
+.form {
+  padding: 10px;
 }
