@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   root to: 'games#index'
   get 'games/index'
 
-  devise_for :users
+  get 'banned', to: 'users#banned'
+
+  devise_for :users, controllers: { registrations: "registrations" }
 
   get 'scoreboard', to: 'scores#index'
   resources :scores
