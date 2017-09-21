@@ -15,10 +15,10 @@ class ScoresController < ApplicationController
   def create
     score = Score.new
     user = current_user
-    score.user_id = user.id
+    score.user_id = current_user.id
     score.highScore = score_params[:score]
 
-    if score.highscore > 10_000
+    if score.highScore > 10_000
       current_user.update banned: true
       redirect_to banned_path
     end
